@@ -32,7 +32,7 @@ resource "aws_s3_bucket_acl" "publicacl" {
 resource "aws_s3_object" "index" {
   bucket = aws_s3_bucket.mybucket.id
   key    = "index.html"
-  source = "/home/kali/Desktop/websiteee/index.html"
+  source = "/path/index.html"
   acl    = "public-read"
   content_type = "text/html"
 }
@@ -40,7 +40,7 @@ resource "aws_s3_object" "index" {
 resource "aws_s3_object" "style" {
   bucket = aws_s3_bucket.mybucket.id
   key    = "style.css"
-  source = "/home/kali/Desktop/websiteee/style.css"
+  source = "/type/path/style.css"
   acl    = "public-read"
   content_type = "text/css"
 }
@@ -48,7 +48,7 @@ resource "aws_s3_object" "style" {
 resource "aws_s3_object" "script" {
   bucket = aws_s3_bucket.mybucket.id
   key    = "script.js"
-  source = "/home/kali/Desktop/websiteee/script.js"
+  source = "/type/path/script.js"
   acl    = "public-read"
   content_type = "application/javascript"
 }
